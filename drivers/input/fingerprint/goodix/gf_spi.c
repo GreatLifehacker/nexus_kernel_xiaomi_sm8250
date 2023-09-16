@@ -479,7 +479,9 @@ static long gf_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
 		break;
 
 	default:
-		pr_warn("unsupport cmd:0x%x\n", cmd);
+		#if 0
+			pr_warn("unsupport cmd:0x%x\n", cmd);
+		#endif
 		break;
 	}
 
