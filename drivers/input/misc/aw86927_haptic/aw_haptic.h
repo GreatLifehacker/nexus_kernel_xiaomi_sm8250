@@ -12,11 +12,18 @@
 /********************************************
  * print information control
  *******************************************/
+#if 0
 #define aw_err(format, ...) pr_err("[haptic_hv]" format, ##__VA_ARGS__)
 
 #define aw_info(format, ...) pr_info("[haptic_hv]" format, ##__VA_ARGS__)
 
 #define aw_dbg(format, ...) pr_debug("[haptic_hv]" format, ##__VA_ARGS__)
+#endif
+#define aw_err(format, ...) ((void)0)
+
+#define aw_info(format, ...) ((void)0)
+
+#define aw_dbg(format, ...) ((void)0)
 
 /*********************************************************
 *
@@ -62,7 +69,7 @@
 *
 ********************************************************/
 #define INPUT_DEV
-#define DEBUG
+#define DEBUG 0
 /* #define TEST_RTP */
 #define AW_RAM_UPDATE_DELAY
 #define ENABLE_PIN_CONTROL

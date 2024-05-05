@@ -338,6 +338,7 @@ static void nav_event_input(struct gf_dev *gf_dev, gf_nav_event_t nav_event)
 
 static void gf_kernel_key_input(struct gf_dev *gf_dev, struct gf_key *gf_key)
 {
+#if 0
 	uint32_t key_input = 0;
 
 	if (GF_KEY_HOME == gf_key->key) {
@@ -382,6 +383,7 @@ static void gf_kernel_key_input(struct gf_dev *gf_dev, struct gf_key *gf_key)
 			gf_dev->key_flag = 0;
 		}
 	}
+#endif
 }
 
 static long gf_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
